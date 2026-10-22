@@ -293,3 +293,10 @@ input[type=checkbox] { border: 2px solid #a565db }
 .sc_scroll th { position: sticky; top: 0; z-index: 1 }
 .sc_th { cursor: pointer; user-select: none; white-space: nowrap }
 .sc_th:hover { text-decoration: underline }
+
+/* ---- "?" quick help icons and tooltip ---- */
+.qh { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; margin-left: 6px; border: 1px solid currentColor; border-radius: 50%; font-size: 11px; font-weight: bold; line-height: 1; vertical-align: middle; cursor: help; opacity: .75; text-transform: none; user-select: none; font-style: normal }
+.qh:hover, .qh:focus { opacity: 1; outline: none; background: rgba(165, 101, 219, .25) }
+#qh_tip { position: fixed; z-index: 100000; display: none; max-width: 360px; padding: 10px 12px; border: 1px solid var(--monthly-bd); border-radius: 8px; background: var(--tip-bg); color: var(--tip-text); box-shadow: 0 6px 18px rgba(0, 0, 0, .35); font-size: 12.5px; line-height: 1.45; text-align: left; text-transform: none; font-weight: normal; pointer-events: none }
+#qh_tip .qh_t { font-weight: bold; color: var(--purple-text); margin-bottom: 4px; font-size: 13px }
+#qh_tip .qh_u { margin-top: 5px; color: var(--muted) }
