@@ -300,3 +300,34 @@ input[type=checkbox] { border: 2px solid #a565db }
 #qh_tip { position: fixed; z-index: 100000; display: none; max-width: 360px; padding: 10px 12px; border: 1px solid var(--monthly-bd); border-radius: 8px; background: var(--tip-bg); color: var(--tip-text); box-shadow: 0 6px 18px rgba(0, 0, 0, .35); font-size: 12.5px; line-height: 1.45; text-align: left; text-transform: none; font-weight: normal; pointer-events: none }
 #qh_tip .qh_t { font-weight: bold; color: var(--purple-text); margin-bottom: 4px; font-size: 13px }
 #qh_tip .qh_u { margin-top: 5px; color: var(--muted) }
+
+/* ---- v2 additions: confidence / yearly / cost tables, quick range bar, new chart tabs ---- */
+.rpt_box { position: relative; border-radius: 10px; overflow: hidden; margin: 16px 10px; box-shadow: 6px 8px 13px 0 var(--wrap-shadow) }
+.rpt_box td, .rpt_box th { border: 1px solid var(--monthly-bd) }
+.rpt_box .heading { position: relative; text-align: center; color: #fff; padding: 15px; font-weight: bolder; background-image: linear-gradient(180deg, var(--monthly-a), var(--monthly-b)) }
+.rpt_box small { font-weight: normal; opacity: .75 }
+.rpt_box .sc_scroll { max-height: none }
+.rt_group { display: inline-flex; align-items: center; gap: 4px }
+.rt_sep { width: 1px; height: 22px; background: var(--border); margin: 0 6px }
+.report_tools { flex-wrap: wrap }
+.tab_tbl { margin: 8px 0 }
+.tab_tbl table { width: 100%; margin-bottom: 6px }
+.tab_tbl td, .tab_tbl th { border: 1px solid var(--monthly-bd); text-align: center; padding: 6px }
+.tabcontent .sc_bar select { max-width: 320px; background: var(--input-bg); color: var(--input-text); border: 1px solid var(--input-border); border-radius: 4px; padding: 2px 6px }
+@media print {
+  #filter_wr, .report_tools, #theme_toggle, #button_to_expand_collapse, #button_load_all, .tab, .sc_bar, #loading_overlay { display: none !important }
+  .watermark2, .rpt_box, .hl_box { box-shadow: none !important; break-inside: avoid }
+  .sc_scroll { max-height: none !important; overflow: visible !important }
+  body { background: #fff !important }
+}
+.wi_warn { margin: 6px 10px; padding: 8px 12px; border: 1px solid #f5a623; border-left-width: 5px; border-radius: 6px; background: rgba(245,166,35,.12); font-size: 12.5px; color: var(--text) }
+
+.wi_warn ul { margin: 4px 0 0; padding-left: 18px }
+.wi_warn li { margin: 2px 0 }
+.wi_verdict { text-align: center }
+.rex_toggle { display: flex; flex-direction: column; justify-content: center; padding: 0 12px; font-size: 13px; color: var(--muted) }
+.rex_toggle label { cursor: pointer; margin: 0; color: var(--text) }
+.rex_toggle input { margin-right: 6px }
+.rex_toggle small { font-size: 11px }
+.corr_scroll { overflow: auto; max-height: 85vh; max-width: 100% }
+.corr_scroll .chart_box { width: auto }
